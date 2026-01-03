@@ -1,0 +1,356 @@
+/* ==========================================================================
+   D. Majumdar & Associates - Responsive Styles
+   Mobile-first approach
+   ========================================================================== */
+
+/* ==========================================================================
+   Mobile Large (480px+)
+   ========================================================================== */
+
+@media (min-width: 480px) {
+  .hero__title {
+    font-size: var(--font-size-4xl);
+  }
+}
+
+/* ==========================================================================
+   Tablet (768px+)
+   ========================================================================== */
+
+@media (min-width: 768px) {
+  :root {
+    --font-size-base: 16px;
+  }
+
+  h1 {
+    font-size: var(--font-size-5xl);
+  }
+
+  h2 {
+    font-size: var(--font-size-4xl);
+  }
+
+  .section {
+    padding: var(--space-4xl) 0;
+  }
+
+  .container {
+    padding: 0 var(--space-lg);
+  }
+
+  /* Grid responsive */
+  .grid-2,
+  .grid-3,
+  .grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Hero */
+  .hero__title {
+    font-size: var(--font-size-5xl);
+  }
+
+  /* Footer */
+  .footer__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Stats */
+  .stats-bar__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ==========================================================================
+   Desktop (1024px+)
+   ========================================================================== */
+
+@media (min-width: 1024px) {
+  /* Header */
+  .header__mobile-toggle {
+    display: none;
+  }
+
+  .header__nav {
+    display: flex;
+  }
+
+  /* Grid responsive */
+  .grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .grid-4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  /* Footer */
+  .footer__grid {
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+  }
+
+  /* WhatsApp float - show on desktop */
+  .whatsapp-float {
+    display: flex;
+  }
+
+  /* Mobile sticky bar - hide on desktop */
+  .mobile-sticky-bar {
+    display: none;
+  }
+}
+
+/* ==========================================================================
+   Desktop Large (1280px+)
+   ========================================================================== */
+
+@media (min-width: 1280px) {
+  .container {
+    padding: 0 var(--space-xl);
+  }
+}
+
+/* ==========================================================================
+   Mobile Only (below 768px)
+   ========================================================================== */
+
+@media (max-width: 767px) {
+  :root {
+    --header-height: var(--header-height-mobile);
+  }
+
+  /* Typography scale down */
+  h1 {
+    font-size: var(--font-size-3xl);
+  }
+
+  h2 {
+    font-size: var(--font-size-2xl);
+  }
+
+  h3 {
+    font-size: var(--font-size-xl);
+  }
+
+  /* Header mobile */
+  .header__nav {
+    display: none;
+    position: fixed;
+    top: var(--header-height-mobile);
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--color-bg);
+    flex-direction: column;
+    padding: var(--space-lg);
+    gap: var(--space-md);
+  }
+
+  .header__nav--open {
+    display: flex;
+  }
+
+  .header__nav-link {
+    font-size: var(--font-size-lg);
+    padding: var(--space-sm) 0;
+    border-bottom: var(--border-width) solid var(--color-border);
+  }
+
+  .header__mobile-toggle {
+    display: flex;
+  }
+
+  .header__actions .btn {
+    display: none;
+  }
+
+  /* Hero mobile */
+  .hero {
+    padding: calc(var(--header-height-mobile) + var(--space-xl)) 0 var(--space-xl);
+  }
+
+  .hero--home {
+    min-height: auto;
+    padding: calc(var(--header-height-mobile) + var(--space-2xl)) 0 var(--space-2xl);
+  }
+
+  .hero__title {
+    font-size: var(--font-size-3xl);
+  }
+
+  .hero__subtitle {
+    font-size: var(--font-size-md);
+  }
+
+  .hero__actions {
+    flex-direction: column;
+  }
+
+  .hero__actions .btn {
+    width: 100%;
+  }
+
+  /* Grids stack on mobile */
+  .grid-2,
+  .grid-3,
+  .grid-4 {
+    grid-template-columns: 1fr;
+  }
+
+  /* Stats mobile */
+  .stats-bar__grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+  }
+
+  .stats-bar__item {
+    padding: var(--space-sm);
+    border-bottom: var(--border-width) solid var(--color-border);
+  }
+
+  .stats-bar__item:last-child {
+    border-bottom: none;
+  }
+
+  /* Footer mobile */
+  .footer__grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+  }
+
+  .footer__bottom {
+    flex-direction: column;
+    gap: var(--space-md);
+    text-align: center;
+  }
+
+  /* Cards mobile */
+  .card__body {
+    padding: var(--space-md);
+  }
+
+  .practice-card {
+    padding: var(--space-lg);
+  }
+
+  .testimonial-card {
+    padding: var(--space-lg);
+  }
+
+  /* CTA Banner mobile */
+  .cta-banner {
+    padding: var(--space-2xl) 0;
+  }
+
+  /* WhatsApp float - hide on mobile (using sticky bar instead) */
+  .whatsapp-float {
+    display: none;
+  }
+
+  /* Mobile sticky bar - show on mobile */
+  .mobile-sticky-bar {
+    display: block;
+  }
+
+  /* Add padding at bottom for mobile sticky bar */
+  body {
+    padding-bottom: 60px;
+  }
+
+  /* Buttons full width on mobile */
+  .btn--mobile-full {
+    width: 100%;
+  }
+
+  /* Disclaimer modal mobile */
+  .disclaimer-modal {
+    margin: var(--space-sm);
+    max-height: calc(100vh - var(--space-lg));
+  }
+
+  .disclaimer-modal__header,
+  .disclaimer-modal__body,
+  .disclaimer-modal__footer {
+    padding: var(--space-md);
+  }
+}
+
+/* ==========================================================================
+   Small Mobile (below 375px)
+   ========================================================================== */
+
+@media (max-width: 374px) {
+  :root {
+    --font-size-base: 14px;
+  }
+
+  .container {
+    padding: 0 var(--space-sm);
+  }
+
+  .hero__title {
+    font-size: var(--font-size-2xl);
+  }
+
+  .btn {
+    padding: var(--space-sm) var(--space-md);
+    font-size: var(--font-size-sm);
+  }
+}
+
+/* ==========================================================================
+   Print Styles
+   ========================================================================== */
+
+@media print {
+  .header,
+  .footer,
+  .whatsapp-float,
+  .mobile-sticky-bar,
+  .disclaimer-overlay {
+    display: none !important;
+  }
+
+  body {
+    padding: 0;
+    color: #000;
+    background: #fff;
+  }
+
+  .hero {
+    padding-top: 0;
+    background: none;
+    color: #000;
+  }
+
+  .hero h1,
+  .hero h2 {
+    color: #000;
+  }
+
+  a {
+    text-decoration: underline;
+  }
+
+  .section {
+    padding: var(--space-lg) 0;
+  }
+}
+
+/* ==========================================================================
+   Reduced Motion
+   ========================================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+}
