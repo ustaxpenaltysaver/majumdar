@@ -285,13 +285,6 @@
   margin-bottom: var(--space-sm);
 }
 
-.practice-card__title-bn {
-  font-family: var(--font-bengali);
-  font-size: var(--font-size-md);
-  color: var(--color-text-light);
-  font-weight: 400;
-}
-
 /* Team Card */
 .team-card {
   text-align: center;
@@ -832,6 +825,33 @@
 .lang-toggle__btn--active {
   background-color: var(--color-primary);
   color: var(--color-text-inverse);
+}
+
+/* Language Switcher Button (Header) */
+.lang-switch {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-xs) var(--space-sm);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  background-color: var(--color-bg-alt);
+  color: var(--color-primary);
+  border: var(--border-width) solid var(--color-border);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  min-width: 44px;
+}
+
+.lang-switch:hover {
+  background-color: var(--color-primary);
+  color: var(--color-text-inverse);
+  border-color: var(--color-primary);
+}
+
+.lang-switch__current {
+  font-family: var(--font-body);
 }
 
 /* ==========================================================================

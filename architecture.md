@@ -134,7 +134,8 @@ members:
 | whatsapp-float | WhatsApp button | All pages |
 | mobile-sticky-bar | Call/WhatsApp bar | All pages (mobile) |
 | exit-popup | Exit intent conversion popup | Home (24h cooldown) |
-| lang-toggle | EN/BN language switcher | Testimonials |
+| lang-switch | Site-wide EN/BN language toggle | All pages (header) |
+| lang-toggle | EN/BN testimonials-only switcher | Testimonials |
 
 ## FORMS
 | Form | Location | Fields |
@@ -152,7 +153,8 @@ members:
 | StickyHeader | main.js | Header shadow on scroll |
 | SmoothScroll | main.js | Anchor link smooth scrolling |
 | Icons | main.js | Lucide icons initialization |
-| LanguageToggle | main.js | EN/BN testimonials switcher |
+| SiteLanguage | main.js | Site-wide EN/BN language toggle (localStorage) |
+| LanguageToggle | main.js | EN/BN testimonials-only switcher |
 | ExitIntent | main.js | Exit popup on mouse leave (24h cooldown) |
 | TestimonialsCarousel | main.js | Auto-rotating carousel (5s interval) |
 | ScrollAnimations | main.js | Intersection Observer fade-in animations |

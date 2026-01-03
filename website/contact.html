@@ -48,19 +48,21 @@
   <header class="header">
     <div class="container header__inner">
       <a href="index.html" class="header__logo">
-        <strong style="font-family: var(--font-heading); font-size: var(--font-size-xl); color: var(--color-primary);">D. Majumdar</strong>
-        <span style="font-size: var(--font-size-xs); color: var(--color-text-light);">& Associates</span>
+        <span style="font-family: var(--font-heading); font-size: var(--font-size-lg); font-weight: 600; color: var(--color-primary);">D. Majumdar & Associates</span>
       </a>
       <nav class="header__nav" aria-label="Main navigation">
-        <a href="index.html" class="header__nav-link">Home</a>
-        <a href="about.html" class="header__nav-link">About</a>
-        <a href="practice-areas.html" class="header__nav-link">Practice Areas</a>
-        <a href="team.html" class="header__nav-link">Our Team</a>
-        <a href="testimonials.html" class="header__nav-link">Testimonials</a>
-        <a href="contact.html" class="header__nav-link header__nav-link--active">Contact</a>
+        <a href="index.html" class="header__nav-link" data-lang-en="Home" data-lang-bn="হোম">Home</a>
+        <a href="about.html" class="header__nav-link" data-lang-en="About" data-lang-bn="আমাদের সম্পর্কে">About</a>
+        <a href="practice-areas.html" class="header__nav-link" data-lang-en="Practice Areas" data-lang-bn="আইনি সেবা">Practice Areas</a>
+        <a href="team.html" class="header__nav-link" data-lang-en="Our Team" data-lang-bn="আমাদের টিম">Our Team</a>
+        <a href="testimonials.html" class="header__nav-link" data-lang-en="Testimonials" data-lang-bn="মতামত">Testimonials</a>
+        <a href="contact.html" class="header__nav-link header__nav-link--active" data-lang-en="Contact" data-lang-bn="যোগাযোগ">Contact</a>
       </nav>
       <div class="header__actions">
-        <a href="contact.html" class="btn btn--primary">Free Consultation</a>
+        <button class="lang-switch" id="lang-switch" aria-label="Switch language">
+          <span class="lang-switch__current" data-lang-en="EN" data-lang-bn="বাং">EN</span>
+        </button>
+        <a href="contact.html" class="btn btn--primary" data-lang-en="Free Consultation" data-lang-bn="বিনামূল্যে পরামর্শ">Free Consultation</a>
       </div>
       <button class="header__mobile-toggle" aria-label="Toggle menu" aria-expanded="false">
         <i data-lucide="menu" aria-hidden="true"></i>
@@ -71,9 +73,9 @@
   <!-- Hero -->
   <section class="hero">
     <div class="container">
-      <p class="hero__eyebrow">Contact Us</p>
-      <h1 class="hero__title">Get in Touch</h1>
-      <p class="hero__subtitle">Have a legal matter to discuss? Reach out to us for a free initial consultation.</p>
+      <p class="hero__eyebrow" data-lang-en="Contact Us" data-lang-bn="যোগাযোগ করুন">Contact Us</p>
+      <h1 class="hero__title" data-lang-en="Get in Touch" data-lang-bn="যোগাযোগ করুন">Get in Touch</h1>
+      <p class="hero__subtitle" data-lang-en="Have a legal matter to discuss? Reach out to us for a free initial consultation." data-lang-bn="আইনি বিষয় নিয়ে আলোচনা করতে চান? বিনামূল্যে প্রাথমিক পরামর্শের জন্য আমাদের সাথে যোগাযোগ করুন।">Have a legal matter to discuss? Reach out to us for a free initial consultation.</p>
     </div>
   </section>
 
@@ -221,32 +223,32 @@
       <div class="footer__grid">
         <div class="footer__brand">
           <div class="footer__logo">
-            <strong style="font-family: var(--font-heading); font-size: var(--font-size-xl); color: var(--color-text-inverse);">D. Majumdar & Associates</strong>
+            <span style="font-family: var(--font-heading); font-size: var(--font-size-lg); font-weight: 600; color: var(--color-text-inverse);">D. Majumdar & Associates</span>
           </div>
-          <p class="footer__tagline">Advocates & Legal Consultants specializing in Indirect Tax Litigation, Commercial Disputes & Corporate Law.</p>
-          <p class="text-sm" style="opacity: 0.6;">Enrolled with Bar Council of West Bengal</p>
+          <p class="footer__tagline" data-lang-en="Advocates & Legal Consultants specializing in Indirect Tax Litigation, Commercial Disputes & Corporate Law." data-lang-bn="পরোক্ষ কর মামলা, বাণিজ্যিক বিরোধ ও কর্পোরেট আইনে বিশেষজ্ঞ আইনজীবী ও আইনি পরামর্শদাতা।">Advocates & Legal Consultants specializing in Indirect Tax Litigation, Commercial Disputes & Corporate Law.</p>
+          <p class="text-sm" style="opacity: 0.6;" data-lang-en="Enrolled with Bar Council of West Bengal" data-lang-bn="বার কাউন্সিল অফ ওয়েস্ট বেঙ্গলে নথিভুক্ত">Enrolled with Bar Council of West Bengal</p>
         </div>
         <div>
-          <h4 class="footer__heading">Quick Links</h4>
+          <h4 class="footer__heading" data-lang-en="Quick Links" data-lang-bn="দ্রুত লিঙ্ক">Quick Links</h4>
           <nav class="footer__links">
-            <a href="about.html" class="footer__link">About Us</a>
-            <a href="practice-areas.html" class="footer__link">Practice Areas</a>
-            <a href="team.html" class="footer__link">Our Team</a>
-            <a href="testimonials.html" class="footer__link">Testimonials</a>
-            <a href="contact.html" class="footer__link">Contact</a>
+            <a href="about.html" class="footer__link" data-lang-en="About Us" data-lang-bn="আমাদের সম্পর্কে">About Us</a>
+            <a href="practice-areas.html" class="footer__link" data-lang-en="Practice Areas" data-lang-bn="আইনি সেবা">Practice Areas</a>
+            <a href="team.html" class="footer__link" data-lang-en="Our Team" data-lang-bn="আমাদের টিম">Our Team</a>
+            <a href="testimonials.html" class="footer__link" data-lang-en="Testimonials" data-lang-bn="মতামত">Testimonials</a>
+            <a href="contact.html" class="footer__link" data-lang-en="Contact" data-lang-bn="যোগাযোগ">Contact</a>
           </nav>
         </div>
         <div>
-          <h4 class="footer__heading">Practice Areas</h4>
+          <h4 class="footer__heading" data-lang-en="Practice Areas" data-lang-bn="আইনি সেবা">Practice Areas</h4>
           <nav class="footer__links">
-            <a href="practice-areas.html#indirect-tax" class="footer__link">Indirect Tax</a>
-            <a href="practice-areas.html#commercial" class="footer__link">Commercial Disputes</a>
-            <a href="practice-areas.html#arbitration" class="footer__link">Arbitration</a>
-            <a href="practice-areas.html#insolvency" class="footer__link">Insolvency</a>
+            <a href="practice-areas.html#indirect-tax" class="footer__link" data-lang-en="Indirect Tax" data-lang-bn="পরোক্ষ কর">Indirect Tax</a>
+            <a href="practice-areas.html#commercial" class="footer__link" data-lang-en="Commercial Disputes" data-lang-bn="বাণিজ্যিক বিরোধ">Commercial Disputes</a>
+            <a href="practice-areas.html#arbitration" class="footer__link" data-lang-en="Arbitration" data-lang-bn="সালিশ">Arbitration</a>
+            <a href="practice-areas.html#insolvency" class="footer__link" data-lang-en="Insolvency" data-lang-bn="দেউলিয়া">Insolvency</a>
           </nav>
         </div>
         <div>
-          <h4 class="footer__heading">Contact</h4>
+          <h4 class="footer__heading" data-lang-en="Contact" data-lang-bn="যোগাযোগ">Contact</h4>
           <div class="footer__contact-item">
             <i data-lucide="map-pin" aria-hidden="true"></i>
             <span>1st Floor - Unit 103, 25 Jawaharlal Nehru Road, Kolkata 700087</span>
@@ -266,9 +268,9 @@
         </div>
       </div>
       <div class="footer__bottom">
-        <p>&copy; 2024 D. Majumdar & Associates. All rights reserved.</p>
+        <p data-lang-en="© 2024 D. Majumdar & Associates. All rights reserved." data-lang-bn="© ২০২৪ D. Majumdar & Associates। সর্বস্বত্ব সংরক্ষিত।">&copy; 2024 D. Majumdar & Associates. All rights reserved.</p>
         <div class="footer__bar-council">
-          <span>Enrolled with Bar Council of West Bengal</span>
+          <span data-lang-en="Enrolled with Bar Council of West Bengal" data-lang-bn="বার কাউন্সিল অফ ওয়েস্ট বেঙ্গলে নথিভুক্ত">Enrolled with Bar Council of West Bengal</span>
         </div>
       </div>
     </div>
@@ -286,11 +288,11 @@
     <div class="mobile-sticky-bar__grid">
       <a href="tel:+919717359398" class="mobile-sticky-bar__btn mobile-sticky-bar__btn--call">
         <i data-lucide="phone" aria-hidden="true"></i>
-        Call Now
+        <span data-lang-en="Call Now" data-lang-bn="কল করুন">Call Now</span>
       </a>
       <a href="https://wa.me/919717359398" class="mobile-sticky-bar__btn mobile-sticky-bar__btn--whatsapp">
         <i data-lucide="message-circle" aria-hidden="true"></i>
-        WhatsApp
+        <span>WhatsApp</span>
       </a>
     </div>
   </div>

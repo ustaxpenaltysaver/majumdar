@@ -136,7 +136,49 @@ const Icons = {
 };
 
 /* ==========================================================================
-   Language Toggle (Testimonials Page)
+   Site-wide Language Toggle
+   ========================================================================== */
+
+const SiteLanguage = {
+  STORAGE_KEY: 'dmajumdar_language',
+  currentLang: 'en',
+
+  init() {
+    this.currentLang = localStorage.getItem(this.STORAGE_KEY) || 'en';
+    this.applyLanguage(this.currentLang);
+
+    const langSwitch = document.getElementById('lang-switch');
+    if (langSwitch) {
+      langSwitch.addEventListener('click', () => this.toggle());
+    }
+  },
+
+  toggle() {
+    this.currentLang = this.currentLang === 'en' ? 'bn' : 'en';
+    localStorage.setItem(this.STORAGE_KEY, this.currentLang);
+    this.applyLanguage(this.currentLang);
+  },
+
+  applyLanguage(lang) {
+    document.documentElement.lang = lang === 'bn' ? 'bn' : 'en';
+
+    document.querySelectorAll('[data-lang-en][data-lang-bn]').forEach(el => {
+      const text = lang === 'bn' ? el.dataset.langBn : el.dataset.langEn;
+      if (text) el.textContent = text;
+    });
+
+    if (lang === 'bn') {
+      document.body.classList.add('lang-bn');
+      document.body.classList.remove('lang-en');
+    } else {
+      document.body.classList.add('lang-en');
+      document.body.classList.remove('lang-bn');
+    }
+  }
+};
+
+/* ==========================================================================
+   Language Toggle (Testimonials Page Only)
    ========================================================================== */
 
 const LanguageToggle = {
@@ -335,6 +377,7 @@ document.addEventListener('DOMContentLoaded', () => {
   StickyHeader.init();
   SmoothScroll.init();
   Icons.init();
+  SiteLanguage.init();
   LanguageToggle.init();
   ExitIntent.init();
   TestimonialsCarousel.init();

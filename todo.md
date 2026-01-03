@@ -3,7 +3,7 @@
 
 ## STATUS
 Last updated: 2026-01-03
-Current phase: Phase 6 - Mobile & Polish
+Current phase: Phase 7 - Testing & QA
 
 ---
 
@@ -272,3 +272,4 @@ None
 - Phase 4: Conversion Elements (sticky header, exit popup, carousel, scroll animations)
 - Phase 5: Content (testimonials EN/BN, form microcopy, error/success messages, CTA variations)
 - Phase 6: Mobile & Polish (responsive review, minified CSS/JS for production)
+- Site-wide language toggle (EN/BN switcher in header, data-lang attributes, localStorage persistence)
