@@ -84,19 +84,14 @@ const StickyHeader = {
     const header = document.querySelector('.header');
     if (!header) return;
 
-    let lastScroll = 0;
     const scrollThreshold = 50;
 
     window.addEventListener('scroll', () => {
-      const currentScroll = window.scrollY;
-
-      if (currentScroll > scrollThreshold) {
+      if (window.scrollY > scrollThreshold) {
         header.classList.add('header--scrolled');
       } else {
         header.classList.remove('header--scrolled');
       }
-
-      lastScroll = currentScroll;
     }, { passive: true });
   }
 };
@@ -141,6 +136,196 @@ const Icons = {
 };
 
 /* ==========================================================================
+   Language Toggle (Testimonials Page)
+   ========================================================================== */
+
+const LanguageToggle = {
+  init() {
+    const langBtns = document.querySelectorAll('.lang-toggle__btn');
+    if (!langBtns.length) return;
+
+    const testimonialsEn = document.getElementById('testimonials-en');
+    const testimonialsBn = document.getElementById('testimonials-bn');
+    if (!testimonialsEn || !testimonialsBn) return;
+
+    langBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        langBtns.forEach(b => {
+          b.classList.remove('lang-toggle__btn--active');
+          b.setAttribute('aria-selected', 'false');
+        });
+        btn.classList.add('lang-toggle__btn--active');
+        btn.setAttribute('aria-selected', 'true');
+
+        if (btn.dataset.lang === 'bn') {
+          testimonialsEn.hidden = true;
+          testimonialsBn.hidden = false;
+        } else {
+          testimonialsEn.hidden = false;
+          testimonialsBn.hidden = true;
+        }
+      });
+    });
+  }
+};
+
+/* ==========================================================================
+   Exit Intent Popup (Home Page Only)
+   ========================================================================== */
+
+const ExitIntent = {
+  STORAGE_KEY: 'dmajumdar_exit_popup_shown',
+  COOLDOWN_HOURS: 24,
+
+  init() {
+    if (!document.body.classList.contains('page-home')) return;
+    if (this.wasRecentlyShown()) return;
+
+    document.addEventListener('mouseout', (e) => {
+      if (e.clientY < 10 && e.relatedTarget === null) {
+        this.show();
+      }
+    });
+
+    const closeBtn = document.getElementById('exit-popup-close');
+    if (closeBtn) {
+      closeBtn.addEventListener('click', () => this.hide());
+    }
+
+    const overlay = document.getElementById('exit-popup');
+    if (overlay) {
+      overlay.addEventListener('click', (e) => {
+        if (e.target === overlay) this.hide();
+      });
+    }
+  },
+
+  wasRecentlyShown() {
+    const stored = localStorage.getItem(this.STORAGE_KEY);
+    if (!stored) return false;
+
+    const { timestamp } = JSON.parse(stored);
+    const cooldownMs = this.COOLDOWN_HOURS * 60 * 60 * 1000;
+    return Date.now() - timestamp < cooldownMs;
+  },
+
+  show() {
+    const popup = document.getElementById('exit-popup');
+    if (!popup || popup.dataset.shown === 'true') return;
+
+    popup.hidden = false;
+    popup.dataset.shown = 'true';
+    document.body.style.overflow = 'hidden';
+
+    localStorage.setItem(this.STORAGE_KEY, JSON.stringify({
+      timestamp: Date.now()
+    }));
+  },
+
+  hide() {
+    const popup = document.getElementById('exit-popup');
+    if (!popup) return;
+
+    popup.hidden = true;
+    document.body.style.overflow = '';
+  }
+};
+
+/* ==========================================================================
+   Testimonials Carousel
+   ========================================================================== */
+
+const TestimonialsCarousel = {
+  currentIndex: 0,
+  autoplayInterval: null,
+  AUTOPLAY_DELAY: 5000,
+
+  init() {
+    this.track = document.querySelector('.testimonials-carousel__track');
+    this.slides = document.querySelectorAll('.testimonials-carousel__slide');
+    this.prevBtn = document.querySelector('.testimonials-carousel__prev');
+    this.nextBtn = document.querySelector('.testimonials-carousel__next');
+    this.dots = document.querySelectorAll('.testimonials-carousel__dot');
+
+    if (!this.track || !this.slides.length) return;
+
+    this.prevBtn?.addEventListener('click', () => this.prev());
+    this.nextBtn?.addEventListener('click', () => this.next());
+
+    this.dots.forEach((dot, index) => {
+      dot.addEventListener('click', () => this.goTo(index));
+    });
+
+    this.track.addEventListener('mouseenter', () => this.stopAutoplay());
+    this.track.addEventListener('mouseleave', () => this.startAutoplay());
+
+    this.startAutoplay();
+  },
+
+  goTo(index) {
+    this.currentIndex = index;
+    if (this.currentIndex < 0) this.currentIndex = this.slides.length - 1;
+    if (this.currentIndex >= this.slides.length) this.currentIndex = 0;
+
+    const offset = -this.currentIndex * 100;
+    this.track.style.transform = `translateX(${offset}%)`;
+
+    this.dots.forEach((dot, i) => {
+      dot.classList.toggle('testimonials-carousel__dot--active', i === this.currentIndex);
+    });
+  },
+
+  next() {
+    this.goTo(this.currentIndex + 1);
+  },
+
+  prev() {
+    this.goTo(this.currentIndex - 1);
+  },
+
+  startAutoplay() {
+    this.autoplayInterval = setInterval(() => this.next(), this.AUTOPLAY_DELAY);
+  },
+
+  stopAutoplay() {
+    if (this.autoplayInterval) {
+      clearInterval(this.autoplayInterval);
+      this.autoplayInterval = null;
+    }
+  }
+};
+
+/* ==========================================================================
+   Scroll Animations
+   ========================================================================== */
+
+const ScrollAnimations = {
+  init() {
+    const elements = document.querySelectorAll('[data-animate]');
+    if (!elements.length) return;
+
+    if (!('IntersectionObserver' in window)) {
+      elements.forEach(el => el.classList.add('animated'));
+      return;
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animated');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    });
+
+    elements.forEach(el => observer.observe(el));
+  }
+};
+
+/* ==========================================================================
    Initialize
    ========================================================================== */
 
@@ -150,4 +335,8 @@ document.addEventListener('DOMContentLoaded', () => {
   StickyHeader.init();
   SmoothScroll.init();
   Icons.init();
+  LanguageToggle.init();
+  ExitIntent.init();
+  TestimonialsCarousel.init();
+  ScrollAnimations.init();
 });

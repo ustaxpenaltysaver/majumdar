@@ -385,30 +385,5 @@
   <script src="https://unpkg.com/lucide@latest"></script>
   <script src="js/main.js"></script>
   <script src="js/forms.js"></script>
-  <script>
-    // Language toggle for testimonials
-    const langBtns = document.querySelectorAll('.lang-toggle__btn');
-    const testimonialsEn = document.getElementById('testimonials-en');
-    const testimonialsBn = document.getElementById('testimonials-bn');
-
-    langBtns.forEach(btn => {
-      btn.addEventListener('click', () => {
-        langBtns.forEach(b => {
-          b.classList.remove('lang-toggle__btn--active');
-          b.setAttribute('aria-selected', 'false');
-        });
-        btn.classList.add('lang-toggle__btn--active');
-        btn.setAttribute('aria-selected', 'true');
-
-        if (btn.dataset.lang === 'bn') {
-          testimonialsEn.hidden = true;
-          testimonialsBn.hidden = false;
-        } else {
-          testimonialsEn.hidden = false;
-          testimonialsBn.hidden = true;
-        }
-      });
-    });
-  </script>
 </body>
 </html>

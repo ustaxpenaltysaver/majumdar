@@ -3,7 +3,7 @@
 
 ## STATUS
 Last updated: 2026-01-03
-Current phase: Phase 4 - Conversion Elements
+Current phase: Phase 5 - Content
 
 ---
 
@@ -155,21 +155,21 @@ Implement as: Click-through disclaimer modal before viewing site content
 ---
 
 ## PHASE 4: Conversion Elements
-**Status:** [ ] Not Started
+**Status:** [x] Complete (2026-01-03)
 
 ### Global Elements
-- [ ] Sticky header on scroll
-- [ ] WhatsApp floating button
-- [ ] Mobile sticky footer bar (Call + WhatsApp)
-- [ ] Exit-intent popup (home only)
+- [x] Sticky header on scroll
+- [x] WhatsApp floating button
+- [x] Mobile sticky footer bar (Call + WhatsApp)
+- [x] Exit-intent popup (home only)
 
 ### JavaScript
-- [ ] Mobile menu toggle
-- [ ] Smooth scroll
-- [ ] Testimonials carousel
-- [ ] EN/BN language toggle
-- [ ] Form validation
-- [ ] Scroll animations
+- [x] Mobile menu toggle
+- [x] Smooth scroll
+- [x] Testimonials carousel
+- [x] EN/BN language toggle
+- [x] Form validation
+- [x] Scroll animations
 
 ---
 
@@ -269,3 +269,4 @@ None
 - Phase 1: Foundation (folder structure, CSS, JS, design system)
 - Phase 2: Core Pages (index, about, practice-areas, team, contact, testimonials)
 - Phase 3: Secondary Pages (join-us, blog, 404)
+- Phase 4: Conversion Elements (sticky header, exit popup, carousel, scroll animations)

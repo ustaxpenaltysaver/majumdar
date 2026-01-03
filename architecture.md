@@ -122,11 +122,14 @@ members:
 | hero | Page hero with title/CTA | All pages |
 | cta-banner | Conversion section | Home, Practice, About |
 | testimonial-card | Single testimonial | Home, Testimonials |
+| testimonials-carousel | Auto-rotating testimonials | Home |
 | team-card | Team member profile | Team, Home |
 | practice-card | Practice area card | Home, Practice Areas |
 | contact-form | Consultation request | Contact, Home |
 | whatsapp-float | WhatsApp button | All pages |
 | mobile-sticky-bar | Call/WhatsApp bar | All pages (mobile) |
+| exit-popup | Exit intent conversion popup | Home (24h cooldown) |
+| lang-toggle | EN/BN language switcher | Testimonials |
 
 ## FORMS
 | Form | Location | Fields |
@@ -135,6 +138,20 @@ members:
 | Testimonial | testimonials.html | name, company, email, language, testimonial, rating |
 | Job Application | join-us.html | name, email, phone, position, experience, resume, cover_letter |
 | Newsletter | footer | email |
+
+## JS_MODULES
+| Module | File | Purpose |
+|--------|------|---------|
+| Disclaimer | main.js | BCI disclaimer modal with localStorage (30-day expiry) |
+| MobileNav | main.js | Mobile menu toggle |
+| StickyHeader | main.js | Header shadow on scroll |
+| SmoothScroll | main.js | Anchor link smooth scrolling |
+| Icons | main.js | Lucide icons initialization |
+| LanguageToggle | main.js | EN/BN testimonials switcher |
+| ExitIntent | main.js | Exit popup on mouse leave (24h cooldown) |
+| TestimonialsCarousel | main.js | Auto-rotating carousel (5s interval) |
+| ScrollAnimations | main.js | Intersection Observer fade-in animations |
+| FormValidator | forms.js | Form validation with error messages |
 
 ## CSS_ARCHITECTURE
 ```yaml

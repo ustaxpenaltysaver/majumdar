@@ -19,7 +19,7 @@
   <link rel="stylesheet" href="css/components.css">
   <link rel="stylesheet" href="css/responsive.css">
 </head>
-<body>
+<body class="page-home">
   <!-- BCI Disclaimer Modal -->
   <div class="disclaimer-overlay" id="disclaimer-overlay">
     <div class="disclaimer-modal" role="dialog" aria-labelledby="disclaimer-title" aria-modal="true">
@@ -45,6 +45,26 @@
       </div>
       <div class="disclaimer-modal__footer">
         <button type="button" class="btn btn--primary btn--lg" id="disclaimer-accept">I Agree</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Exit Intent Popup -->
+  <div class="exit-popup" id="exit-popup" hidden>
+    <div class="exit-popup__content">
+      <button class="exit-popup__close" id="exit-popup-close" aria-label="Close popup">
+        <i data-lucide="x" aria-hidden="true"></i>
+      </button>
+      <div class="exit-popup__header">
+        <h3>Wait! Before You Go...</h3>
+        <p>Get expert legal advice for your business</p>
+      </div>
+      <div class="exit-popup__body">
+        <p>Schedule a free consultation with our experienced advocates to discuss your legal matters.</p>
+        <a href="contact.html" class="btn btn--accent btn--lg btn--full">Book Free Consultation</a>
+        <p style="margin-top: var(--space-md); margin-bottom: 0; font-size: var(--font-size-sm);">
+          Or call us directly: <a href="tel:+919717359398" style="color: var(--color-primary); font-weight: 600;">+91 9717359398</a>
+        </p>
       </div>
     </div>
   </div>
@@ -114,12 +134,12 @@
   <!-- Practice Areas -->
   <section class="section" id="practice-areas">
     <div class="container">
-      <div class="text-center" style="margin-bottom: var(--space-2xl);">
+      <div class="text-center" style="margin-bottom: var(--space-2xl);" data-animate="fade-up">
         <h2>Our Practice Areas</h2>
         <p class="text-lg text-muted">Comprehensive legal services tailored to your business needs</p>
       </div>
 
-      <div class="grid grid-3">
+      <div class="grid grid-3" data-animate="fade-up">
         <div class="card practice-card">
           <div class="practice-card__icon">
             <i data-lucide="receipt" aria-hidden="true"></i>
@@ -184,12 +204,12 @@
   <!-- Why Choose Us -->
   <section class="section section--alt">
     <div class="container">
-      <div class="text-center" style="margin-bottom: var(--space-2xl);">
+      <div class="text-center" style="margin-bottom: var(--space-2xl);" data-animate="fade-up">
         <h2>Why Choose Us</h2>
         <p class="text-lg text-muted">What sets D. Majumdar & Associates apart</p>
       </div>
 
-      <div class="grid grid-4">
+      <div class="grid grid-4" data-animate="fade-up">
         <div class="text-center">
           <div style="width: 64px; height: 64px; margin: 0 auto var(--space-md); color: var(--color-accent);">
             <i data-lucide="award" style="width: 100%; height: 100%;" aria-hidden="true"></i>
@@ -228,30 +248,71 @@
   <!-- Testimonials Preview -->
   <section class="section">
     <div class="container">
-      <div class="text-center" style="margin-bottom: var(--space-2xl);">
+      <div class="text-center" style="margin-bottom: var(--space-2xl);" data-animate="fade-up">
         <h2>What Our Clients Say</h2>
         <p class="text-lg text-muted">Trusted by businesses across India</p>
       </div>
 
-      <div class="grid grid-2">
-        <div class="card testimonial-card">
-          <p class="testimonial-card__text">"D. Majumdar & Associates handled our GST dispute with exceptional expertise. Their strategic approach and deep knowledge of tax laws helped us achieve a favorable ruling at CESTAT."</p>
-          <div class="testimonial-card__author">
-            <div>
-              <div class="testimonial-card__name">Rajesh Kumar</div>
-              <div class="testimonial-card__company">Director, Manufacturing Company</div>
+      <div class="testimonials-carousel" data-animate="fade-up">
+        <div class="testimonials-carousel__track">
+          <div class="testimonials-carousel__slide">
+            <div class="card testimonial-card" style="max-width: 700px; margin: 0 auto;">
+              <p class="testimonial-card__text">"D. Majumdar & Associates handled our GST dispute with exceptional expertise. Their strategic approach and deep knowledge of tax laws helped us achieve a favorable ruling at CESTAT."</p>
+              <div class="testimonial-card__author">
+                <div>
+                  <div class="testimonial-card__name">Rajesh Kumar</div>
+                  <div class="testimonial-card__company">Director, Steel Manufacturing Ltd.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonials-carousel__slide">
+            <div class="card testimonial-card" style="max-width: 700px; margin: 0 auto;">
+              <p class="testimonial-card__text">"Professional, knowledgeable, and dedicated. The team guided us through a complex commercial arbitration with clarity and achieved results beyond our expectations."</p>
+              <div class="testimonial-card__author">
+                <div>
+                  <div class="testimonial-card__name">Priya Sharma</div>
+                  <div class="testimonial-card__company">CEO, Eastern Trading Enterprise</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonials-carousel__slide">
+            <div class="card testimonial-card" style="max-width: 700px; margin: 0 auto;">
+              <p class="testimonial-card__text">"We engaged D. Majumdar & Associates for a customs duty dispute that had been pending for years. Their thorough understanding of customs law and persistent follow-up resulted in a successful resolution."</p>
+              <div class="testimonial-card__author">
+                <div>
+                  <div class="testimonial-card__name">Amit Agarwal</div>
+                  <div class="testimonial-card__company">Managing Partner, Agarwal Imports</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonials-carousel__slide">
+            <div class="card testimonial-card" style="max-width: 700px; margin: 0 auto;">
+              <p class="testimonial-card__text">"Dipankar and his team provided excellent representation in our NCLT matter. Their deep understanding of insolvency proceedings and strategic advocacy helped protect our interests as creditors."</p>
+              <div class="testimonial-card__author">
+                <div>
+                  <div class="testimonial-card__name">Vikram Singh</div>
+                  <div class="testimonial-card__company">Director, Singh Finance Corp.</div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-
-        <div class="card testimonial-card">
-          <p class="testimonial-card__text">"Professional, knowledgeable, and dedicated. The team guided us through a complex commercial arbitration with clarity and achieved results beyond our expectations."</p>
-          <div class="testimonial-card__author">
-            <div>
-              <div class="testimonial-card__name">Priya Sharma</div>
-              <div class="testimonial-card__company">CEO, Trading Enterprise</div>
-            </div>
+        <div class="testimonials-carousel__nav">
+          <button class="testimonials-carousel__prev" aria-label="Previous testimonial">
+            <i data-lucide="chevron-left" aria-hidden="true"></i>
+          </button>
+          <div class="testimonials-carousel__dots">
+            <button class="testimonials-carousel__dot testimonials-carousel__dot--active" aria-label="Go to slide 1"></button>
+            <button class="testimonials-carousel__dot" aria-label="Go to slide 2"></button>
+            <button class="testimonials-carousel__dot" aria-label="Go to slide 3"></button>
+            <button class="testimonials-carousel__dot" aria-label="Go to slide 4"></button>
           </div>
+          <button class="testimonials-carousel__next" aria-label="Next testimonial">
+            <i data-lucide="chevron-right" aria-hidden="true"></i>
+          </button>
         </div>
       </div>
 
@@ -264,12 +325,12 @@
   <!-- Team Preview -->
   <section class="section section--alt">
     <div class="container">
-      <div class="text-center" style="margin-bottom: var(--space-2xl);">
+      <div class="text-center" style="margin-bottom: var(--space-2xl);" data-animate="fade-up">
         <h2>Meet Our Team</h2>
         <p class="text-lg text-muted">Experienced advocates committed to your success</p>
       </div>
 
-      <div class="grid grid-4">
+      <div class="grid grid-4" data-animate="fade-up">
         <div class="card team-card" style="padding: var(--space-lg);">
           <div class="team-card__image" style="background-color: var(--color-bg-alt);"></div>
           <h4 class="team-card__name">Dipankar Majumdar</h4>
