@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="D. Majumdar & Associates - Leading law firm in Kolkata specializing in Indirect Tax Litigation, Commercial Disputes, and Corporate Law. 10+ years of experience.">
+  <title>D. Majumdar & Associates | Advocates - Indirect Tax & Commercial Litigation</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Noto+Sans+Bengali:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <!-- BCI Disclaimer Modal -->
+  <div class="disclaimer-overlay" id="disclaimer-overlay">
+    <div class="disclaimer-modal" role="dialog" aria-labelledby="disclaimer-title" aria-modal="true">
+      <div class="disclaimer-modal__header">
+        <div class="disclaimer-modal__logo">
+          <strong style="font-family: var(--font-heading); font-size: var(--font-size-xl); color: var(--color-primary);">D. Majumdar & Associates</strong>
+        </div>
+        <h2 class="disclaimer-modal__title" id="disclaimer-title">Disclaimer</h2>
+      </div>
+      <div class="disclaimer-modal__body">
+        <p class="disclaimer-modal__text">
+          As per the rules of the Bar Council of India, advocates are not permitted to solicit work or advertise. By clicking "I Agree" below, you acknowledge that:
+        </p>
+        <ul class="disclaimer-modal__list">
+          <li>The information provided on this website is authentic and accurate.</li>
+          <li>There has been no advertisement, solicitation, invitation or inducement of any sort whatsoever from us or any of our members to solicit any work through this website.</li>
+          <li>This website is for informational purposes only and accessing it does not create an attorney-client relationship.</li>
+          <li>The information on this website should not be construed as legal advice.</li>
+        </ul>
+        <p class="disclaimer-modal__text">
+          By proceeding further, you confirm that you are seeking information of your own accord regarding D. Majumdar & Associates and wish to gain more information about us for your own use.
+        </p>
+      </div>
+      <div class="disclaimer-modal__footer">
+        <button type="button" class="btn btn--primary btn--lg" id="disclaimer-accept">I Agree</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container header__inner">
+      <a href="index.html" class="header__logo">
+        <strong style="font-family: var(--font-heading); font-size: var(--font-size-xl); color: var(--color-primary);">D. Majumdar</strong>
+        <span style="font-size: var(--font-size-xs); color: var(--color-text-light);">& Associates</span>
+      </a>
+
+      <nav class="header__nav" aria-label="Main navigation">
+        <a href="index.html" class="header__nav-link header__nav-link--active">Home</a>
+        <a href="about.html" class="header__nav-link">About</a>
+        <a href="practice-areas.html" class="header__nav-link">Practice Areas</a>
+        <a href="team.html" class="header__nav-link">Our Team</a>
+        <a href="testimonials.html" class="header__nav-link">Testimonials</a>
+        <a href="contact.html" class="header__nav-link">Contact</a>
+      </nav>
+
+      <div class="header__actions">
+        <a href="contact.html" class="btn btn--primary">Free Consultation</a>
+      </div>
+
+      <button class="header__mobile-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <i data-lucide="menu" aria-hidden="true"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero hero--home">
+    <div class="container">
+      <div class="hero__content">
+        <p class="hero__eyebrow">Trusted Legal Expertise Since 2014</p>
+        <h1 class="hero__title">Protecting Your Business Interests with Legal Excellence</h1>
+        <p class="hero__subtitle">Specialized in Indirect Tax Litigation, Commercial Disputes & Corporate Law. Representing clients across India in High Courts, Tribunals & Appellate Forums.</p>
+        <div class="hero__actions">
+          <a href="contact.html" class="btn btn--accent btn--lg">Schedule Consultation</a>
+          <a href="practice-areas.html" class="btn btn--outline-light btn--lg">Our Services</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Bar -->
+  <section class="stats-bar">
+    <div class="container">
+      <div class="stats-bar__grid">
+        <div class="stats-bar__item">
+          <div class="stats-bar__number">10+</div>
+          <div class="stats-bar__label">Years of Experience</div>
+        </div>
+        <div class="stats-bar__item">
+          <div class="stats-bar__number">500+</div>
+          <div class="stats-bar__label">Cases Handled</div>
+        </div>
+        <div class="stats-bar__item">
+          <div class="stats-bar__number">Pan-India</div>
+          <div class="stats-bar__label">Presence & Representation</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Practice Areas -->
+  <section class="section" id="practice-areas">
+    <div class="container">
+      <div class="text-center" style="margin-bottom: var(--space-2xl);">
+        <h2>Our Practice Areas</h2>
+        <p class="text-lg text-muted">Comprehensive legal services tailored to your business needs</p>
+      </div>
+
+      <div class="grid grid-3">
+        <div class="card practice-card">
+          <div class="practice-card__icon">
+            <i data-lucide="receipt" aria-hidden="true"></i>
+          </div>
+          <h3 class="practice-card__title">Indirect Tax Litigation</h3>
+          <p class="practice-card__title-bn">পরোক্ষ কর মামলা ও পরামর্শ</p>
+          <p class="text-muted text-sm">GST, Customs, Service Tax, Entry Tax disputes before CESTAT, GST Tribunal & High Courts</p>
+        </div>
+
+        <div class="card practice-card">
+          <div class="practice-card__icon">
+            <i data-lucide="briefcase" aria-hidden="true"></i>
+          </div>
+          <h3 class="practice-card__title">Commercial Disputes</h3>
+          <p class="practice-card__title-bn">বাণিজ্যিক বিরোধ</p>
+          <p class="text-muted text-sm">Contract disputes, business litigation, recovery suits & commercial arbitration</p>
+        </div>
+
+        <div class="card practice-card">
+          <div class="practice-card__icon">
+            <i data-lucide="shield-alert" aria-hidden="true"></i>
+          </div>
+          <h3 class="practice-card__title">White-Collar Crimes</h3>
+          <p class="practice-card__title-bn">হোয়াইট-কলার অপরাধ</p>
+          <p class="text-muted text-sm">Corporate fraud, money laundering, economic offences & regulatory compliance</p>
+        </div>
+
+        <div class="card practice-card">
+          <div class="practice-card__icon">
+            <i data-lucide="scale" aria-hidden="true"></i>
+          </div>
+          <h3 class="practice-card__title">Arbitration & Mediation</h3>
+          <p class="practice-card__title-bn">সালিশ, সমঝোতা ও মধ্যস্থতা</p>
+          <p class="text-muted text-sm">Domestic & international arbitration, conciliation & alternative dispute resolution</p>
+        </div>
+
+        <div class="card practice-card">
+          <div class="practice-card__icon">
+            <i data-lucide="users" aria-hidden="true"></i>
+          </div>
+          <h3 class="practice-card__title">Labour & Industrial</h3>
+          <p class="practice-card__title-bn">শিল্প ও শ্রম বিরোধ</p>
+          <p class="text-muted text-sm">Employment disputes, labour tribunal representation & industrial relations</p>
+        </div>
+
+        <div class="card practice-card">
+          <div class="practice-card__icon">
+            <i data-lucide="building-2" aria-hidden="true"></i>
+          </div>
+          <h3 class="practice-card__title">Insolvency & Bankruptcy</h3>
+          <p class="practice-card__title-bn">দেউলিয়া ও ঋণশোধন অক্ষমতা</p>
+          <p class="text-muted text-sm">IBC proceedings, NCLT matters, corporate restructuring & debt resolution</p>
+        </div>
+      </div>
+
+      <div class="text-center" style="margin-top: var(--space-xl);">
+        <a href="practice-areas.html" class="btn btn--outline">View All Practice Areas</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="section section--alt">
+    <div class="container">
+      <div class="text-center" style="margin-bottom: var(--space-2xl);">
+        <h2>Why Choose Us</h2>
+        <p class="text-lg text-muted">What sets D. Majumdar & Associates apart</p>
+      </div>
+
+      <div class="grid grid-4">
+        <div class="text-center">
+          <div style="width: 64px; height: 64px; margin: 0 auto var(--space-md); color: var(--color-accent);">
+            <i data-lucide="award" style="width: 100%; height: 100%;" aria-hidden="true"></i>
+          </div>
+          <h4>Specialized Expertise</h4>
+          <p class="text-sm text-muted">Deep expertise in indirect tax and commercial litigation with proven track record</p>
+        </div>
+
+        <div class="text-center">
+          <div style="width: 64px; height: 64px; margin: 0 auto var(--space-md); color: var(--color-accent);">
+            <i data-lucide="target" style="width: 100%; height: 100%;" aria-hidden="true"></i>
+          </div>
+          <h4>Result-Oriented</h4>
+          <p class="text-sm text-muted">Strategic approach focused on achieving favorable outcomes for our clients</p>
+        </div>
+
+        <div class="text-center">
+          <div style="width: 64px; height: 64px; margin: 0 auto var(--space-md); color: var(--color-accent);">
+            <i data-lucide="clock" style="width: 100%; height: 100%;" aria-hidden="true"></i>
+          </div>
+          <h4>Timely Response</h4>
+          <p class="text-sm text-muted">Prompt communication and quick turnaround on all legal matters</p>
+        </div>
+
+        <div class="text-center">
+          <div style="width: 64px; height: 64px; margin: 0 auto var(--space-md); color: var(--color-accent);">
+            <i data-lucide="handshake" style="width: 100%; height: 100%;" aria-hidden="true"></i>
+          </div>
+          <h4>Client-Centric</h4>
+          <p class="text-sm text-muted">Personalized attention and transparent communication throughout your case</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Preview -->
+  <section class="section">
+    <div class="container">
+      <div class="text-center" style="margin-bottom: var(--space-2xl);">
+        <h2>What Our Clients Say</h2>
+        <p class="text-lg text-muted">Trusted by businesses across India</p>
+      </div>
+
+      <div class="grid grid-2">
+        <div class="card testimonial-card">
+          <p class="testimonial-card__text">"D. Majumdar & Associates handled our GST dispute with exceptional expertise. Their strategic approach and deep knowledge of tax laws helped us achieve a favorable ruling at CESTAT."</p>
+          <div class="testimonial-card__author">
+            <div>
+              <div class="testimonial-card__name">Rajesh Kumar</div>
+              <div class="testimonial-card__company">Director, Manufacturing Company</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card testimonial-card">
+          <p class="testimonial-card__text">"Professional, knowledgeable, and dedicated. The team guided us through a complex commercial arbitration with clarity and achieved results beyond our expectations."</p>
+          <div class="testimonial-card__author">
+            <div>
+              <div class="testimonial-card__name">Priya Sharma</div>
+              <div class="testimonial-card__company">CEO, Trading Enterprise</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center" style="margin-top: var(--space-xl);">
+        <a href="testimonials.html" class="btn btn--outline">Read More Testimonials</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team Preview -->
+  <section class="section section--alt">
+    <div class="container">
+      <div class="text-center" style="margin-bottom: var(--space-2xl);">
+        <h2>Meet Our Team</h2>
+        <p class="text-lg text-muted">Experienced advocates committed to your success</p>
+      </div>
+
+      <div class="grid grid-4">
+        <div class="card team-card" style="padding: var(--space-lg);">
+          <div class="team-card__image" style="background-color: var(--color-bg-alt);"></div>
+          <h4 class="team-card__name">Dipankar Majumdar</h4>
+          <p class="team-card__role">Founder</p>
+          <p class="team-card__expertise">Indirect Tax, Commercial Litigation</p>
+        </div>
+
+        <div class="card team-card" style="padding: var(--space-lg);">
+          <div class="team-card__image" style="background-color: var(--color-bg-alt);"></div>
+          <h4 class="team-card__name">Subhashree Majumdar</h4>
+          <p class="team-card__role">Commercial Lawyer</p>
+          <p class="team-card__expertise">Commercial Law</p>
+        </div>
+
+        <div class="card team-card" style="padding: var(--space-lg);">
+          <div class="team-card__image" style="background-color: var(--color-bg-alt);"></div>
+          <h4 class="team-card__name">Bijay Kumar Sharma</h4>
+          <p class="team-card__role">Indirect Tax Lawyer</p>
+          <p class="team-card__expertise">Indirect Tax</p>
+        </div>
+
+        <div class="card team-card" style="padding: var(--space-lg);">
+          <div class="team-card__image" style="background-color: var(--color-bg-alt);"></div>
+          <h4 class="team-card__name">Aishi Pal</h4>
+          <p class="team-card__role">Associate</p>
+          <p class="team-card__expertise">Indirect Tax, Commercial</p>
+        </div>
+      </div>
+
+      <div class="text-center" style="margin-top: var(--space-xl);">
+        <a href="team.html" class="btn btn--outline">View Full Team</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Banner -->
+  <section class="cta-banner">
+    <div class="container">
+      <h2>Ready to Discuss Your Legal Matter?</h2>
+      <p>Schedule a free consultation with our experienced advocates today.</p>
+      <div class="flex justify-center gap-md">
+        <a href="contact.html" class="btn btn--accent btn--lg">Book Consultation</a>
+        <a href="tel:+919717359398" class="btn btn--outline-light btn--lg">
+          <i data-lucide="phone" aria-hidden="true"></i>
+          Call Now
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <div class="footer__logo">
+            <strong style="font-family: var(--font-heading); font-size: var(--font-size-xl); color: var(--color-text-inverse);">D. Majumdar & Associates</strong>
+          </div>
+          <p class="footer__tagline">Advocates & Legal Consultants specializing in Indirect Tax Litigation, Commercial Disputes & Corporate Law.</p>
+          <p class="text-sm" style="opacity: 0.6;">Enrolled with Bar Council of West Bengal</p>
+        </div>
+
+        <div>
+          <h4 class="footer__heading">Quick Links</h4>
+          <nav class="footer__links">
+            <a href="about.html" class="footer__link">About Us</a>
+            <a href="practice-areas.html" class="footer__link">Practice Areas</a>
+            <a href="team.html" class="footer__link">Our Team</a>
+            <a href="testimonials.html" class="footer__link">Testimonials</a>
+            <a href="contact.html" class="footer__link">Contact</a>
+          </nav>
+        </div>
+
+        <div>
+          <h4 class="footer__heading">Practice Areas</h4>
+          <nav class="footer__links">
+            <a href="practice-areas.html#indirect-tax" class="footer__link">Indirect Tax</a>
+            <a href="practice-areas.html#commercial" class="footer__link">Commercial Disputes</a>
+            <a href="practice-areas.html#arbitration" class="footer__link">Arbitration</a>
+            <a href="practice-areas.html#insolvency" class="footer__link">Insolvency</a>
+          </nav>
+        </div>
+
+        <div>
+          <h4 class="footer__heading">Contact</h4>
+          <div class="footer__contact-item">
+            <i data-lucide="map-pin" aria-hidden="true"></i>
+            <span>1st Floor - Unit 103, 25 Jawaharlal Nehru Road, Kolkata 700087</span>
+          </div>
+          <div class="footer__contact-item">
+            <i data-lucide="phone" aria-hidden="true"></i>
+            <span>+91 33-84226852</span>
+          </div>
+          <div class="footer__contact-item">
+            <i data-lucide="smartphone" aria-hidden="true"></i>
+            <span>+91 9717359398</span>
+          </div>
+          <div class="footer__contact-item">
+            <i data-lucide="mail" aria-hidden="true"></i>
+            <span>dipankar@dmajumdar.com</span>
+          </div>
+          <div class="footer__contact-item">
+            <i data-lucide="clock" aria-hidden="true"></i>
+            <span>Mon-Sat: 10 AM - 6 PM</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p>&copy; 2024 D. Majumdar & Associates. All rights reserved.</p>
+        <div class="footer__bar-council">
+          <span>Enrolled with Bar Council of West Bengal</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Float -->
+  <a href="https://wa.me/919717359398" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+  </a>
+
+  <!-- Mobile Sticky Bar -->
+  <div class="mobile-sticky-bar">
+    <div class="mobile-sticky-bar__grid">
+      <a href="tel:+919717359398" class="mobile-sticky-bar__btn mobile-sticky-bar__btn--call">
+        <i data-lucide="phone" aria-hidden="true"></i>
+        Call Now
+      </a>
+      <a href="https://wa.me/919717359398" class="mobile-sticky-bar__btn mobile-sticky-bar__btn--whatsapp">
+        <i data-lucide="message-circle" aria-hidden="true"></i>
+        WhatsApp
+      </a>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

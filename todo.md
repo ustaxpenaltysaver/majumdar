@@ -3,7 +3,7 @@
 
 ## STATUS
 Last updated: 2026-01-03
-Current phase: Phase 2 - Core Pages
+Current phase: Phase 3 - Secondary Pages
 
 ---
 
@@ -70,62 +70,63 @@ Implement as: Click-through disclaimer modal before viewing site content
 ---
 
 ## PHASE 2: Core Pages (P0)
-**Status:** [ ] Not Started
+**Status:** [x] Complete (2026-01-03)
 
 ### Home Page (index.html)
-- [ ] Header (logo, nav, CTA button)
-- [ ] Hero section (headline, CTA, trust badges)
-- [ ] Stats bar (10+ years, 500+ cases, pan-India)
-- [ ] Practice areas grid (6 cards)
-- [ ] Why choose us section (4 points)
-- [ ] Testimonials carousel (EN/BN toggle)
-- [ ] Team preview (3-4 members)
-- [ ] Blog preview (2-3 articles)
-- [ ] Final CTA banner
-- [ ] Footer (contact, links, bar council)
+- [x] Header (logo, nav, CTA button)
+- [x] Hero section (headline, CTA, trust badges)
+- [x] Stats bar (10+ years, 500+ cases, pan-India)
+- [x] Practice areas grid (6 cards)
+- [x] Why choose us section (4 points)
+- [x] Testimonials preview (2 cards)
+- [x] Team preview (4 members)
+- [x] Final CTA banner
+- [x] Footer (contact, links, bar council)
+- [x] WhatsApp float + Mobile sticky bar
+- [x] BCI disclaimer modal
 
 ### About Page (about.html)
-- [ ] Hero with page title
-- [ ] Firm story section
-- [ ] Mission & values
-- [ ] Founder profile (Dipankar Majumdar)
-- [ ] Our approach section
-- [ ] Credentials/bar council
-- [ ] CTA section
+- [x] Hero with page title
+- [x] Firm story section
+- [x] Mission & values
+- [x] Founder profile (Dipankar Majumdar)
+- [x] Our approach section
+- [x] Credentials/bar council
+- [x] CTA section
 
 ### Practice Areas (practice-areas.html)
-- [ ] Hero with page title
-- [ ] Indirect Tax section
-- [ ] Commercial Disputes section
-- [ ] White-Collar Crimes section
-- [ ] Arbitration section
-- [ ] Labour Disputes section
-- [ ] Insolvency section
-- [ ] CTA section
+- [x] Hero with page title
+- [x] Indirect Tax section
+- [x] Commercial Disputes section
+- [x] White-Collar Crimes section
+- [x] Arbitration section
+- [x] Labour Disputes section
+- [x] Insolvency section
+- [x] CTA section
 
 ### Team (team.html)
-- [ ] Hero with page title
-- [ ] Team introduction
-- [ ] Dipankar Majumdar card
-- [ ] Subhashree Majumdar card
-- [ ] Bijay Kumar Sharma card
-- [ ] Aishi Pal card
-- [ ] Milan Kr Paul card (support)
-- [ ] Join team CTA
+- [x] Hero with page title
+- [x] Team introduction
+- [x] Dipankar Majumdar card (featured)
+- [x] Subhashree Majumdar card
+- [x] Bijay Kumar Sharma card
+- [x] Aishi Pal card
+- [x] Milan Kr Paul card (support)
+- [x] Join team CTA
 
 ### Contact (contact.html)
-- [ ] Hero with page title
-- [ ] Contact methods grid (phone, WhatsApp, email)
-- [ ] Google Maps embed placeholder
-- [ ] Office hours
-- [ ] Consultation request form
-- [ ] Response time promise
+- [x] Hero with page title
+- [x] Contact methods grid (phone, WhatsApp, email)
+- [x] Google Maps placeholder
+- [x] Office hours
+- [x] Consultation request form
+- [x] Response time promise
 
 ### Testimonials (testimonials.html)
-- [ ] Hero with page title
-- [ ] Language toggle (EN/BN)
-- [ ] Testimonials grid (6 EN + 6 BN placeholders)
-- [ ] Submit testimonial form
+- [x] Hero with page title
+- [x] Language toggle (EN/BN)
+- [x] Testimonials grid (6 EN + 6 BN)
+- [x] Submit testimonial form
 
 ---
 
@@ -266,3 +267,4 @@ None
 ### 2026-01-03
 - Phase 0: Research (Google Fonts, Lucide, Favicon, BCI compliance)
 - Phase 1: Foundation (folder structure, CSS, JS, design system)
+- Phase 2: Core Pages (index, about, practice-areas, team, contact, testimonials)
