@@ -26,12 +26,17 @@ website/
 │
 ├── css/
 │   ├── styles.css          # Main styles + variables
+│   ├── styles.min.css      # Minified (production)
 │   ├── components.css      # Reusable components
-│   └── responsive.css      # Mobile breakpoints
+│   ├── components.min.css  # Minified (production)
+│   ├── responsive.css      # Mobile breakpoints
+│   └── responsive.min.css  # Minified (production)
 │
 ├── js/
 │   ├── main.js             # Core functionality
-│   └── forms.js            # Form validation/handling
+│   ├── main.min.js         # Minified (production)
+│   ├── forms.js            # Form validation/handling
+│   └── forms.min.js        # Minified (production)
 │
 └── images/
     ├── logo.svg
