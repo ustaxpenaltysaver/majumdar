@@ -12,12 +12,37 @@ const FormValidator = {
   },
 
   messages: {
-    required: 'This field is required',
-    email: 'Please enter a valid email address',
-    phone: 'Please enter a valid phone number',
-    name: 'Please enter a valid name',
-    minLength: (min) => `Minimum ${min} characters required`,
-    maxLength: (max) => `Maximum ${max} characters allowed`
+    required: 'Please fill this field',
+    email: 'Please enter a valid email (e.g., name@company.com)',
+    phone: 'Please enter a valid phone number (10+ digits)',
+    name: 'Please enter your full name',
+    select: 'Please select an option',
+    minLength: (min) => `Please enter at least ${min} characters`,
+    maxLength: (max) => `Please keep it under ${max} characters`,
+    file: 'Please upload a valid file (PDF or Word, max 5MB)'
+  },
+
+  successMessages: {
+    consultation: {
+      title: 'Request Received',
+      text: 'Thank you for reaching out. We will contact you within 24 hours to schedule your consultation.'
+    },
+    testimonial: {
+      title: 'Thank You',
+      text: 'We appreciate you taking the time to share your experience. Your testimonial will be reviewed and published soon.'
+    },
+    application: {
+      title: 'Application Submitted',
+      text: 'Thank you for your interest in joining our team. We will review your application and get back to you within 5 business days.'
+    },
+    newsletter: {
+      title: 'Subscribed',
+      text: 'You have been added to our mailing list. We will send you updates on legal developments and firm news.'
+    },
+    default: {
+      title: 'Submitted Successfully',
+      text: 'Thank you for your message. We will get back to you soon.'
+    }
   },
 
   init() {
@@ -62,11 +87,15 @@ const FormValidator = {
     let error = null;
 
     if (rules.required && !value) {
-      error = this.messages.required;
+      if (field.tagName === 'SELECT') {
+        error = this.messages.select;
+      } else {
+        error = this.messages.required;
+      }
     } else if (value) {
       if (rules.type === 'email' && !this.patterns.email.test(value)) {
         error = this.messages.email;
-      } else if (rules.type === 'phone' && !this.patterns.phone.test(value)) {
+      } else if ((rules.type === 'tel' || rules.type === 'phone') && !this.patterns.phone.test(value)) {
         error = this.messages.phone;
       } else if (rules.minLength && value.length < rules.minLength) {
         error = this.messages.minLength(rules.minLength);
@@ -138,13 +167,38 @@ const FormValidator = {
     }, 1000);
   },
 
+  getFormType(form) {
+    const action = form.getAttribute('action') || '';
+    const id = form.getAttribute('id') || '';
+    const parentId = form.parentElement?.id || '';
+    const pageUrl = window.location.pathname;
+
+    if (pageUrl.includes('contact') || form.querySelector('[name="case_type"]')) {
+      return 'consultation';
+    }
+    if (pageUrl.includes('testimonial') || form.querySelector('[name="testimonial"]')) {
+      return 'testimonial';
+    }
+    if (pageUrl.includes('join') || form.querySelector('[name="position"]') || form.querySelector('[name="resume"]')) {
+      return 'application';
+    }
+    if (form.querySelector('[name="newsletter"]') || form.classList.contains('newsletter-form')) {
+      return 'newsletter';
+    }
+    return 'default';
+  },
+
   showSuccess(form) {
+    const formType = this.getFormType(form);
+    const msg = this.successMessages[formType] || this.successMessages.default;
+
     const successMsg = document.createElement('div');
     successMsg.className = 'form-success';
     successMsg.setAttribute('role', 'status');
     successMsg.innerHTML = `
       <i data-lucide="check-circle"></i>
-      <p>Thank you for your message. We will get back to you soon.</p>
+      <h3>${msg.title}</h3>
+      <p>${msg.text}</p>
     `;
 
     form.reset();
