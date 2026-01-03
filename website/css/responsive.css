@@ -273,6 +273,62 @@
   .disclaimer-modal__footer {
     padding: var(--space-md);
   }
+
+  /* Form 2-column to single column on mobile */
+  .form-row--2col {
+    grid-template-columns: 1fr;
+  }
+
+  /* Blog layout stacks on mobile */
+  .blog-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .blog-sidebar {
+    order: -1;
+  }
+
+  .blog-featured {
+    grid-template-columns: 1fr;
+  }
+
+  .blog-featured__image {
+    min-height: 200px;
+  }
+
+  /* Error page mobile */
+  .error-page {
+    padding: calc(var(--header-height-mobile) + var(--space-xl)) 0 var(--space-xl);
+  }
+
+  .error-page__code {
+    font-size: 5rem;
+  }
+
+  .error-page__title {
+    font-size: var(--font-size-2xl);
+  }
+
+  .error-page__message {
+    font-size: var(--font-size-md);
+  }
+
+  .error-page__nav {
+    flex-direction: column;
+  }
+
+  .error-page__link {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .error-page__cta .flex {
+    flex-direction: column;
+  }
+
+  .error-page__cta .btn {
+    width: 100%;
+  }
 }
 
 /* ==========================================================================
