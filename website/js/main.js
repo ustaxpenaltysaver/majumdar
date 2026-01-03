@@ -163,9 +163,15 @@ const SiteLanguage = {
     document.documentElement.lang = lang === 'bn' ? 'bn' : 'en';
 
     document.querySelectorAll('[data-lang-en][data-lang-bn]').forEach(el => {
+      if (el.classList.contains('lang-switch__current')) return;
       const text = lang === 'bn' ? el.dataset.langBn : el.dataset.langEn;
       if (text) el.textContent = text;
     });
+
+    const langSwitchText = document.querySelector('.lang-switch__current');
+    if (langSwitchText) {
+      langSwitchText.textContent = lang === 'bn' ? 'English' : 'বাংলা';
+    }
 
     if (lang === 'bn') {
       document.body.classList.add('lang-bn');

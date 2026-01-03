@@ -231,29 +231,76 @@ Implement as: Click-through disclaimer modal before viewing site content
 
 ---
 
-## PHASE 8: Deployment
+## PHASE 8: Pre-Deployment
 **Status:** [ ] Not Started
 
-### Pre-Deploy
-- [ ] Meta tags (SEO)
-- [ ] Open Graph tags
-- [ ] Favicon set
+### SEO & Meta
+- [ ] Meta tags (title, description per page)
+- [ ] Open Graph tags (og:title, og:description, og:image)
+- [ ] Twitter card meta tags
+- [ ] Canonical URLs
+
+### Assets
+- [ ] Favicon set complete (favicon.svg, favicon-48.png, apple-touch-icon.png)
 - [ ] robots.txt
 - [ ] sitemap.xml
 
-### GCP Setup
-- [ ] Create Cloud Storage bucket
-- [ ] Configure static hosting
-- [ ] Upload files
-- [ ] Configure domain (dmajumdar.com)
-- [ ] SSL certificate
-- [ ] DNS records
+---
 
-### Post-Deploy
-- [ ] Test live site
-- [ ] Google Search Console
-- [ ] Google Analytics
-- [ ] Form backend setup
+## PHASE 9: GCP Hosting
+**Status:** [ ] Not Started
+
+### GCP Project Setup
+- [ ] Create new GCP project (dmajumdar-website or similar)
+- [ ] Enable billing account
+- [ ] Enable Cloud Storage API
+
+### Cloud Storage Setup
+- [ ] Create Cloud Storage bucket (dmajumdar.com)
+- [ ] Set bucket to public access (allUsers: Storage Object Viewer)
+- [ ] Configure bucket for static website hosting
+- [ ] Set main page suffix (index.html)
+- [ ] Set 404 page (404.html)
+
+### Upload & Deploy
+- [ ] Upload all website files to bucket
+- [ ] Verify file structure matches local
+- [ ] Test bucket URL (storage.googleapis.com)
+
+### Domain Configuration
+- [ ] Verify domain ownership in GCP
+- [ ] Create CNAME record pointing to c.storage.googleapis.com
+- [ ] Configure custom domain in Cloud Storage
+- [ ] Wait for DNS propagation
+
+### SSL/HTTPS
+- [ ] Set up Cloud CDN (optional, for HTTPS with custom domain)
+- [ ] OR use Cloudflare for SSL termination
+- [ ] Verify HTTPS works
+
+---
+
+## PHASE 10: Post-Deployment
+**Status:** [ ] Not Started
+
+### Verification
+- [ ] Test live site (all pages load)
+- [ ] Test forms submission
+- [ ] Test language switcher
+- [ ] Test mobile responsiveness
+- [ ] Test all links
+
+### Analytics & SEO
+- [ ] Set up Google Analytics 4
+- [ ] Add GA4 tracking code to all pages
+- [ ] Submit sitemap to Google Search Console
+- [ ] Verify site in Google Search Console
+
+### Form Backend
+- [ ] Choose form backend (Formspree, Netlify Forms, or custom)
+- [ ] Configure form endpoints
+- [ ] Test form submissions
+- [ ] Set up email notifications
 
 ---
 
